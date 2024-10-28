@@ -1,7 +1,7 @@
 'use strict';
 
 const { resetUsers } = require('./services/users.service.js');
-const { resetExpenses } = require('./services/expenses.servise.js');
+const { resetExpenses } = require('./services/expenses.service.js');
 const { userRouter } = require('./routes/users.route');
 const { expenseRoute } = require('./routes/expenses.route');
 

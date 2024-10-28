@@ -1,4 +1,4 @@
-const { createId } = require('../utils/id.servise');
+const { createId } = require('../utils/id.service');
 
 let expenses = [];
 
@@ -27,6 +27,8 @@ const updateExpense = (newElem) => {
   const { id } = newElem;
 
   expenses = expenses.map((elem) => (elem.id === +id ? newElem : elem));
+
+  return newElem;
 };
 const deleteExpense = (id) => {
   const index = expenses.findIndex((elem) => elem.id === id);

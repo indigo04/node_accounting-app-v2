@@ -1,4 +1,4 @@
-const { createId } = require('../utils/id.servise');
+const { createId } = require('../utils/id.service');
 
 let users = [];
 
@@ -27,6 +27,8 @@ const updateUser = (newElem) => {
   const { id } = newElem;
 
   users = users.map((elem) => (elem.id === +id ? newElem : elem));
+
+  return newElem;
 };
 const deleteUser = (id) => {
   const index = users.findIndex((elem) => elem.id === id);

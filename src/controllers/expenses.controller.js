@@ -5,7 +5,7 @@ const {
   deleteExpense,
   updateExpense,
   getExpenses,
-} = require('../services/expenses.servise');
+} = require('../services/expenses.service');
 const { getUser } = require('../services/users.service');
 
 const getAll = (req, res) => {

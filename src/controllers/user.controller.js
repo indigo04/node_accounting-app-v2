@@ -19,6 +19,8 @@ const add = (req, res) => {
 
   if (!name) {
     res.sendStatus(400);
+
+    return;
   }
 
   const rawUser = {
@@ -36,12 +38,16 @@ const get = (req, res) => {
 
   if (!id) {
     res.sendStatus(400);
+
+    return;
   }
 
   const user = getUser(+id);
 
   if (!user) {
     res.sendStatus(404);
+
+    return;
   }
 
   res.send(user);
@@ -67,12 +73,16 @@ const update = (req, res) => {
 
   if (!id || !name) {
     res.sendStatus(400);
+
+    return;
   }
 
   const user = getUser(+id);
 
   if (!user) {
     res.sendStatus(404);
+
+    return;
   }
 
   const newUser = {
